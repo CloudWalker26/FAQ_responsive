@@ -1,0 +1,164 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Accordion */
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.accordion-button {
+  padding: 10px;
+  padding-left: 0;
+  /* color: orange; */
+}
+
+.accordion-body {
+  padding: 10px;
+  padding-left: 0;
+  color: hsl(240, 6%, 50%);
+}
+
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: white;
+  box-shadow: none;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button {
+  font-size: 1rem;
+  color: hsl(237, 12%, 33%);
+  /* font-weight: bolder; */
+}
+
+.accordion-button:hover {
+  color: orange;
+}
+
+.accordion-button:not(.collapsed) {
+  font-weight: bold;
+  color: hsl(237, 12%, 33%);
+}
+
+hr {
+  margin: 0;
+  border: none;
+  background: black;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  background-color: white;
+  margin: 5% auto;
+  height: auto;
+  position: relative;
+  border-radius: 15px;
+}
+
+.images {
+  min-width: 40%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.woman-desktop {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  left: -60px;
+  padding: 15% 0;
+  /* overflow: hidden; */
+
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 135%;
+  background-position-x: 100%;
+  background-position-y: 50%;
+}
+
+.box-desktop {
+  /* display: none; */
+  position: absolute;
+  top: 38%;
+  left: -7.5%;
+}
+
+.woman-mobile {
+  display: none;
+}
+
+.texts {
+  min-width: 60%;
+  padding: 50px 25px;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .box-desktop,
+  .woman-desktop {
+    display: none;
+  }
+  .images {
+    width: 100%;
+    overflow: visible;
+  }
+
+  img.woman-mobile {
+    display: block;
+    position: relative;
+    z-index: 1;
+    top: -6.1rem;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+
+    background-image: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: bottom center;
+  }
+
+  .texts {
+    height: 60%;
+    width: 100%;
+    position: relative;
+    /* top: 3rem; */
+    padding-top: 0;
+  }
+
+  .heading h1 {
+    text-align: center;
+  }
+} ;
